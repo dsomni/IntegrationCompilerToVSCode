@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>name</key>
+    <string>Example Color Scheme</string>
+    <key>settings</key>
+    <array>
+        <!-- Global styles -->
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#222222</string>
+                <key>foreground</key>
+                <string>#EEEEEE</string>
+                <key>caret</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict>
+
+        <!-- Scope styles -->
+        <dict>
+            <key>name</key>
+            <string>Keywords</string>
+            <key>scope</key>
+            <string>keyword.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#33F7F3</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Loops</string>
+            <key>scope</key>
+            <string>keyword.control.loop.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFC14</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Logical Operators</string>
+            <key>scope</key>
+            <string>keyword.operator.logical.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#0810FB</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Logical Values</string>
+            <key>scope</key>
+            <string>constant.language.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#F71C4F</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Types</string>
+            <key>scope</key>
+            <string>entity.name.type.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFC80F</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Const Type</string>
+            <key>scope</key>
+            <string>entity.name.constant.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#9C0FFF</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Assignment</string>
+            <key>scope</key>
+            <string>keyword.operator.assignment.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00FFB7</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Variables</string>
+            <key>scope</key>
+            <string>variable.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FF14D5</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Float Constants</string>
+            <key>scope</key>
+            <string>constant.numeric.float.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B5FF8D</string>
+            </dict>
+        </dict>
+
+        <dict>
+            <key>name</key>
+            <string>Integer Constants</string>
+            <key>scope</key>
+            <string>constant.numeric.integer.tiny</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#00EB23</string>
+            </dict>
+        </dict>
+
+    </array>
+</dict>

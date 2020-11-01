@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tiny",
+	"uuid": "805375ec-d614-41f5-8993-5843fe63ea82",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tiny",
+				"match": "\\b(if|while|for|return)\\b"
+			}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.tiny",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tiny",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables":{
+			"name": "variable.tiny",
+			"match": "\\b[a-zA-Z]+([0-9]*[a-zA-Z]*)*\\b"
+
+		},
+		"constants":{
+			"settings":[
+				{
+					"foreground": "FF0000"
+				}
+			],
+			"name": "constant.numeric.tiny",
+			"match": "\\b[1-9]+[0-9]*\\b"
+		}
+	},
+	"scopeName": "source.tiny"
+}

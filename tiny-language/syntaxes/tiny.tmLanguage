@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>tiny</string>
+	</array>
+	<key>name</key>
+	<string>Tiny</string>
+	<key>patterns</key>
+	<array>
+
+		<dict>
+			<key>match</key>
+			<string>\b(else|return|call|end)\b</string>
+			<key>name</key>
+			<string>keyword.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(while|do)\b</string>
+			<key>name</key>			
+			<string>keyword.control.loop.tiny</string>
+		</dict>	
+
+		<dict>
+			<key>match</key>
+			<string>(\b(and|or|xor)\b)|(=|>=|<=|/=|>|<)</string>
+			<key>name</key>			
+			<string>keyword.operator.logical.tiny</string>
+		</dict>	
+
+		<dict>
+			<key>match</key>
+			<string>\b(true|false|null)\b</string>
+			<key>name</key>
+			<string>constant.language.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(integer|real|boolean)\b</string>
+			<key>name</key>
+			<string>entity.name.type.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\bconst\b</string>
+			<key>name</key>
+			<string>entity.name.constant.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>:=</string>
+			<key>name</key>
+			<string>keyword.operator.assignment.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b[a-zA-Z]+([a-zA-Z]*[0-9]*)*\b</string>
+			<key>name</key>
+			<string>variable.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b([0-9]+\.[0-9]+)\b</string>
+			<key>name</key>
+			<string>constant.numeric.float.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b[1-9]+[0-9]*\b</string>
+			<key>name</key>
+			<string>constant.numeric.integer.tiny</string>
+		</dict>
+
+		<!--aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.prototype.tiny</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.prototype.tiny</string>
+				</dict>
+			</dict>
+
+			<key>match</key>
+			<string>\b(?i:(fun))\b\s+(\w+(\.\w+)?)(\(.*?\))?;\s*(?=(?i:attribute|forward|external))</string>
+			<key>name</key>
+			<string>meta.function.prototype.tiny</string>
+		</dict>
+
+
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.tiny</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.tiny</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b(?i:(function|procedure|constructor|destructor|property|read|write))\b\s+(\w+(\.\w+)?)</string>
+			<key>name</key>
+			<string>meta.function.tiny</string>
+		</dict>
+
+			<dict>
+			<key>match</key>
+			<string>\b(?i:(self|result))\b</string>
+			<key>name</key>			
+			<string>token.variable</string>
+		</dict>	
+
+
+
+		<dict>
+			<key>begin</key>
+			<string>\{\$</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>string.regexp</string>
+		</dict>	
+
+		<dict>
+			<key>match</key>
+			<string>\b(?i:(ansichar|ansistring|boolean|byte|cardinal|char|comp|currency|double|dword|extended|file|integer|int64|longint|longword|nativeint|nativeuint|olevariant|pansichar|pchar|pwidechar|pointer|real|shortint|shortstring|single|smallint|string|uint64|variant|widechar|widestring|word|wordbool))\b</string>
+			<key>name</key>			
+			<string>storage.support.type.tiny</string>
+		</dict>	
+		<dict>
+			<key>match</key>
+			<string>\b(\d+)|(\d*\.\d+([eE][\-+]?\d+)?)\b</string>
+			<key>name</key>
+			<string>constant.numeric.tiny</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\$[0-9a-fA-F]{1,16}\b</string>
+			<key>name</key>
+			<string>constant.numeric.hex.tiny</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(?i:(Assert))\b</string>
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^[ \t]+)?(?=//)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.whitespace.comment.leading.tiny</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(?!\G)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>//</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.tiny</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\n</string>
+					<key>name</key>
+					<string>comment.line.double-slash.tiny.two</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\(\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.tiny</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\*\)</string>
+			<key>name</key>
+			<string>comment.block.tiny.one</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{(?!\$)</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.tiny</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>comment.block.tiny.two</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.tiny</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>'</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.tiny</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.single.tiny</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>''</string>
+					<key>name</key>
+					<string>constant.character.escape.apostrophe.tiny</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\#\d+</string>
+			<key>name</key>
+			<string>string.other.tiny</string>
+		</dict>
+	</array>
+
+
+	<key>scopeName</key>
+	<string>source.tiny</string>
+	<key>uuid</key>
+	<string>F42FA544-6B1C-11D9-9517-000D93589AF6</string>
+</dict>
+</plist>

@@ -1,0 +1,51 @@
+{
+	"name": "tiny-language",
+	"displayName": "tiny-language",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onCommand:tiny-language.helloWorld"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "tiny",
+				"aliases": [
+					"Tiny",
+					"tiny"
+				],
+				"extensions": [
+					".tiny"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "tiny",
+				"scopeName": "source.tiny",
+				"path": "./syntaxes/tiny.tmLanguage"
+			}
+		],
+		"commands": [
+			{
+				"command": "tiny-language.helloWorld",
+				"title": "Hello World"
+			}
+		],
+		"themes": [
+			{
+				"label": "Sample Theme",
+				"uiTheme": "vs-dark",
+				"path": "./tiny.tmTheme"
+			}
+		]
+	}
+}

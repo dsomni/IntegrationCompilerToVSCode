@@ -1,0 +1,7 @@
+else return call end
+while do
+and or xor <= < = /= > >=
+true false null
+integer real boolean
+const x := 5
+y:=6.5
